@@ -1,0 +1,113 @@
+$bg-color: #f4f9ff;
+$dark-gray: #1c1c1c;
+$blue: #2b7bff;
+$gray: #8c8c8c;
+
+.offer {
+    background: $bg-color;
+    padding: 3rem;
+
+    @media (max-width:500px) {
+        padding: 1rem;
+    }
+
+    h1 {
+        color: $dark-gray;
+        font-size: 2.2rem;
+        text-align: center;
+        font-weight: 600;
+        word-spacing: 5px;
+    }
+
+    .tabs {
+        display: flex;
+        gap: 1rem;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        width: fit-content;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        margin: 2rem auto;
+        text-align: center;
+
+        @media (max-width:500px) {
+            padding: .5rem;
+            gap: .5rem;
+            font-size: .8rem;
+            margin: 2rem 0;
+        }
+
+        div {
+            font-weight: 700;
+            color: $dark-gray;
+            padding: 10px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .active {
+            background-color: $blue;
+            color: white;
+        }
+    }
+
+    .tab-card {
+        max-width: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        background: white;
+        padding: 1.5rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 15px;
+        gap: .5rem;
+        margin: 2rem auto;
+
+        img {
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: $dark-gray;
+            font-size: 1.8rem;
+        }
+
+        p {
+            color: $gray;
+        }
+
+        button {
+            background: none;
+            color: $blue;
+            border: none;
+            outline: none;
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -10%;
+                left: 50%;
+                width: 0%;
+                height: 3px;
+                transform: translateX(-50%);
+                background: $blue;
+                transition: width .3s linear;
+            }
+
+            &:hover::before {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,136 @@
+$blue: #3a84ff;
+$light-blue: #0483f9;
+$white: #f5f7fa;
+$gray: #b0b0b0;
+$dark-gray: #1c1c1c;
+$light-gray: #cccccc;
+
+footer {
+    margin: 3rem 0 0;
+    background: $dark-gray;
+    color: white;
+    padding: 2rem;
+
+
+
+    img {
+        width: 150px;
+    }
+
+    .top {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: .5px solid $gray;
+
+
+        @media (max-width:900px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width:500px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+
+
+        .span {
+            grid-column: span 2;
+
+            @media (max-width:900px) {
+                grid-column: span 3;
+            }
+
+            @media (max-width:500px) {
+                grid-column: span 2;
+            }
+
+            img {
+                width: 150px;
+            }
+
+            .desc {
+                margin: 1rem 0;
+                color: $gray;
+                font-size: .9rem;
+            }
+
+            .download {
+                margin: 1rem 0;
+
+                .stores {
+                    display: flex;
+                    gap: 1rem;
+                    padding: .5rem 0;
+                }
+            }
+        }
+
+        .link-con {
+            .links {
+                h3 {
+                    font-weight: 600;
+                    font-size: 1rem;
+                    margin: 1rem 0;
+                }
+
+                P {
+                    font-size: .8rem;
+                    color: $gray;
+                    padding: 3px 0;
+                    font-weight: 550;
+
+                    &:hover {
+                        color: #00aeca;
+                        transition: .2s linear;
+                        cursor: pointer;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    .sponser {
+        margin: 2rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        border-bottom: .5px solid $gray;
+        padding-bottom: 2rem;
+
+        @media (max-width:500px) {
+            justify-content: center;
+        }
+    }
+
+    .socials {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $light-gray;
+
+        @media (max-width:500px) {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .icons {
+            display: flex;
+            gap: .5rem;
+
+
+            svg {
+                font-size: 1.8rem;
+                transition: .2s linear;
+                cursor: pointer;
+
+                &:hover {
+                    fill: #2daae1;
+                }
+            }
+        }
+    }
+}

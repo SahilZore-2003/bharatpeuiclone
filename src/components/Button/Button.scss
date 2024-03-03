@@ -1,0 +1,26 @@
+$dark-gray: #1c1c1c;
+$gray: #707070;
+$blue: #5595ff;
+$dark-blue: #2b7bff;
+
+.btn-container {
+    text-align: center;
+    margin: 1.5rem 0;
+
+    button {
+        color: $dark-blue;
+        border: 1px solid $dark-blue;
+        transition: .2s linear;
+        padding: 8px 20px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        background-color: white;
+        border-radius: 10px;
+
+        &:hover {
+            color: white;
+            background-color: $blue;
+            cursor: pointer;
+        }
+    }
+}

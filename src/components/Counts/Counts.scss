@@ -1,0 +1,33 @@
+$dark-gray: #1c1c1c;
+$white: #fff;
+
+.counts {
+    background: $dark-gray;
+    color: $white;
+    padding: 3rem 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        margin: 1rem 0;
+        flex-wrap: wrap;
+
+        @media (max-width:500px) {
+            flex-direction: column;
+        }
+
+        .count {
+            img {
+                width: 150px;
+                height: 150px;
+                margin: 1rem 0;
+            }
+
+            p {
+                font-weight: 600;
+            }
+        }
+    }
+}

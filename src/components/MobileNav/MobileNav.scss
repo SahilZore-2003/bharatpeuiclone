@@ -1,0 +1,124 @@
+$blue: #3a84ff;
+$light-blue: #0483f9;
+$white: #f5f7fa;
+$gray: #666666;
+
+.mobile-nav {
+    // padding: 0 3%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(255, 255, 255);
+    min-height: 100%;
+    transition: all .3s linear;
+
+    &.active {
+        left: 0% !important;
+    }
+
+    .topnav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: .1px solid $gray;
+        height: 60px;
+        padding: 0 3%;
+
+        img {
+            width: 150px;
+        }
+
+        svg {
+            fill: $blue;
+            border: 1px solid $blue;
+            font-size: 1.5rem;
+        }
+    }
+
+    .mobile-links {
+
+        >a {
+            padding-inline: 3% !important;
+        }
+
+        a {
+            color: $gray !important;
+            display: flex !important;
+            padding: 1rem 0;
+            font-size: 1.2rem;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .extra-links {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+
+
+            &.active {
+                background-color: #e5efff;
+                color: $blue !important;
+
+                svg {
+                    transform: rotate(90deg);
+                }
+
+                .mobile-other-links {
+                    width: 100%;
+                    display: block;
+
+                    a {
+                        width: 100% !important;
+                    }
+                }
+            }
+
+            div:first-child {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+            }
+
+
+
+            .mobile-other-links {
+                width: 100%;
+                display: none;
+
+                a {
+                    width: 100% !important;
+                }
+            }
+        }
+
+
+    }
+
+    .mobile-social {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1rem;
+        padding: 0 3%;
+
+        .icons {
+            svg {
+                font-size: 1.5rem;
+                margin-right: 10px;
+            }
+        }
+
+        button {
+            color: $blue;
+            display: inline-block !important;
+        }
+    }
+}
